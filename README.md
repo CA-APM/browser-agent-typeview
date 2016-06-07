@@ -34,3 +34,12 @@ Changes for each version of the field pack.
 Version | Author | Comment
 --------|--------|--------
 1.0 | guenter.grossberger@ca.com | First version of the field pack.
+
+## Support URL
+https://github.com/CA-APM/browser-agent-typeview/issues
+
+## Short Description
+Navigation Timing API metrics for CA APM Browser Agent
+
+## Categories
+Examples
