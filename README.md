@@ -10,6 +10,9 @@ This typeviewer provides overviews and a stacked view of Navigation Timing API m
 ## APM version
 Tested with CA APM 10.1.
 
+## Dependencies
+Tested with CA APM 10.1.
+
 ## Limitations
 Only works for Page Load metrics, not AJAX or Javascript metrics.
 
