@@ -1,4 +1,7 @@
-# Browser Agent Typeviewer (1.0)
+# Browser Agent Typeviewer
+
+## Short Description
+This typeviewer provides overviews and a stacked view of Navigation Timing API metrics for CA APM Browser Agent.
 
 ## Description
 This typeviewer provides overviews and a stacked view of Navigation Timing API metrics for CA APM Browser Agent:
