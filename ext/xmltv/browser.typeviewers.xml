@@ -25,17 +25,20 @@
 			<Column content-type="LastPrefixSegment" relative-width="3" segment-offset="2">
 				<Title its:translate="yes">Transaction</Title>
 			</Column>
-			<Column content-type="NumericalValue" relative-specifier=":Average Page Load Complete Time \(ms\)">
-				<Title its:translate="yes">Page Load Complete</Title>
+			<Column content-type="NumericalValue" relative-specifier=":Average Page Load Time \(ms\)">
+				<Title its:translate="yes">Page Load</Title>
 			</Column>
-			<Column content-type="NumericalValue" relative-specifier=":Average DOM Construction Time \(ms\)">
-				<Title its:translate="yes">DOM Construction</Title>
+            <Column content-type="NumericalValue" relative-specifier=":Average Connection Establishment Time \(ms\)">
+				<Title its:translate="yes">Connection</Title>
 			</Column>
-			<Column content-type="NumericalValue" relative-specifier=":Average Round Trip Time \(ms\)">
-				<Title its:translate="yes">Round Trip</Title>
+            <Column content-type="NumericalValue" relative-specifier=":Average Domain Lookup Time \(ms\)">
+				<Title its:translate="yes">DNS</Title>
 			</Column>
-			<Column content-type="NumericalValue" relative-specifier=":Average Browser Render Time \(ms\)">
-				<Title its:translate="yes">Browser Rendering</Title>
+			<Column content-type="NumericalValue" relative-specifier=":Average DOM Processing Time \(ms\)">
+				<Title its:translate="yes">DOM Processing</Title>
+			</Column>
+            <Column content-type="NumericalValue" relative-specifier=":Average Page Render Time \(ms\)">
+				<Title its:translate="yes">Page Render</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier=":Responses Per Interval">
 				<Title its:translate="yes">Responses</Title>
@@ -51,17 +54,20 @@
 			<Column content-type="LastPrefixSegment" relative-width="3" segment-offset="0">
 				<Title its:translate="yes">URL</Title>
 			</Column>
-			<Column content-type="NumericalValue" relative-specifier=":Average Page Load Complete Time \(ms\)">
-				<Title its:translate="yes">Page Load Complete</Title>
+			<Column content-type="NumericalValue" relative-specifier=":Average Page Load Time \(ms\)">
+				<Title its:translate="yes">Page Load</Title>
 			</Column>
-			<Column content-type="NumericalValue" relative-specifier=":Average DOM Construction Time \(ms\)">
-				<Title its:translate="yes">DOM Construction</Title>
+			<Column content-type="NumericalValue" relative-specifier=":Average Connection Establishment Time \(ms\)">
+				<Title its:translate="yes">Connection</Title>
 			</Column>
-			<Column content-type="NumericalValue" relative-specifier=":Average Round Trip Time \(ms\)">
-				<Title its:translate="yes">Round Trip</Title>
+			<Column content-type="NumericalValue" relative-specifier=":Average Domain Lookup Time \(ms\)">
+				<Title its:translate="yes">DNS</Title>
 			</Column>
-			<Column content-type="NumericalValue" relative-specifier=":Average Browser Render Time \(ms\)">
-				<Title its:translate="yes">Browser Rendering</Title>
+			<Column content-type="NumericalValue" relative-specifier=":Average DOM Processing Time \(ms\)">
+				<Title its:translate="yes">DOM Processing</Title>
+			</Column>
+            <Column content-type="NumericalValue" relative-specifier=":Average Page Render Time \(ms\)">
+				<Title its:translate="yes">Page Render</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier=":Responses Per Interval">
 				<Title its:translate="yes">Responses</Title>
@@ -74,18 +80,21 @@
             <Column content-type="LastPrefixSegment" relative-width="3" segment-offset="2">
                 <Title its:translate="yes">Transaction</Title>
             </Column>
-            <Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Page Load Complete Time \(ms\)">
-                <Title its:translate="yes">Page Load Complete</Title>
-            </Column>
-            <Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average DOM Construction Time \(ms\)">
-                <Title its:translate="yes">DOM Construction</Title>
-            </Column>
-            <Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Round Trip Time \(ms\)">
-                <Title its:translate="yes">Round Trip</Title>
-            </Column>
-            <Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Browser Render Time \(ms\)">
-                <Title its:translate="yes">Browser Rendering</Title>
-            </Column>
+            <Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Page Load Time \(ms\)">
+				<Title its:translate="yes">Page Load</Title>
+			</Column>
+			<Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Connection Establishment Time \(ms\)">
+				<Title its:translate="yes">Connection</Title>
+			</Column>
+			<Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Domain Lookup Time \(ms\)">
+				<Title its:translate="yes">DNS</Title>
+			</Column>
+			<Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average DOM Processing Time \(ms\)">
+				<Title its:translate="yes">DOM Processing</Title>
+			</Column>
+            <Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Page Render Time \(ms\)">
+				<Title its:translate="yes">Page Render</Title>
+			</Column>
             <Column content-type="NumericalValue" relative-specifier="(.*)Browser:Responses Per Interval">
                 <Title its:translate="yes">Responses</Title>
             </Column>
@@ -97,18 +106,21 @@
             <Column content-type="LastPrefixSegment" relative-width="3" segment-offset="0">
                 <Title its:translate="yes">Page</Title>
             </Column>
-            <Column content-type="NumericalValue" relative-specifier=":Average Page Load Complete Time \(ms\)">
-                <Title its:translate="yes">Page Load Complete</Title>
-            </Column>
-            <Column content-type="NumericalValue" relative-specifier=":Average DOM Construction Time \(ms\)">
-                <Title its:translate="yes">DOM Construction</Title>
-            </Column>
-            <Column content-type="NumericalValue" relative-specifier=":Average Round Trip Time \(ms\)">
-                <Title its:translate="yes">Round Trip</Title>
-            </Column>
-            <Column content-type="NumericalValue" relative-specifier=":Average Browser Render Time \(ms\)">
-                <Title its:translate="yes">Browser Rendering</Title>
-            </Column>
+            <Column content-type="NumericalValue" relative-specifier=":Average Page Load Time \(ms\)">
+				<Title its:translate="yes">Page Load</Title>
+			</Column>
+			<Column content-type="NumericalValue" relative-specifier=":Average Connection Establishment Time \(ms\)">
+				<Title its:translate="yes">Connection</Title>
+			</Column>
+			<Column content-type="NumericalValue" relative-specifier=":Average Domain Lookup Time \(ms\)">
+				<Title its:translate="yes">DNS</Title>
+			</Column>
+			<Column content-type="NumericalValue" relative-specifier=":Average DOM Processing Time \(ms\)">
+				<Title its:translate="yes">DOM Processing</Title>
+			</Column>
+            <Column content-type="NumericalValue" relative-specifier=":Average Page Render Time \(ms\)">
+				<Title its:translate="yes">Page Render</Title>
+			</Column>
             <Column content-type="NumericalValue" relative-specifier=":Responses Per Interval">
                 <Title its:translate="yes">Responses</Title>
             </Column>
