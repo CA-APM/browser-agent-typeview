@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TypeViewerSet namespace="brtm" version="2.0" xmlns="wily.typeviews" xmlns:its="http://www.w3.org/2005/11/its">
+<TypeViewerSet namespace="Browser" version="2.0" xmlns="wily.typeviews" xmlns:its="http://www.w3.org/2005/11/its">
     <!-- Component Definitions - Start -->
-    <ComponentDefinition id="BRTM-graph">
+    <ComponentDefinition id="Browser-graph">
         <Panel columns="1" layout="GridLayout" rows="2">
             <Graph relative-specifier=":Average .*">
                 <Title its:translate="yes">Browser Timing (ms)</Title>
             </Graph>
 			<Panel columns="2" layout="GridLayout" rows="1">
-				<Graph relative-specifier=":Responses Per Interval">
-					<Title its:translate="yes">Responses Per Interval</Title>
+				<Graph relative-specifier=":Page Hits Per Interval">
+					<Title its:translate="yes">Page Hits Per Interval</Title>
 				</Graph>
-				<Graph relative-specifier=":Errors Per Interval">
-					<Title its:translate="yes">Errors Per Interval</Title>
+				<Graph relative-specifier=":JavaScript Errors Per Interval">
+					<Title its:translate="yes">JavaScript Errors Per Interval</Title>
 				</Graph>
 			</Panel>
         </Panel>
@@ -32,7 +32,7 @@
 				<Title its:translate="yes">Connection</Title>
 			</Column>
             <Column content-type="NumericalValue" relative-specifier=":Average Domain Lookup Time \(ms\)">
-				<Title its:translate="yes">DNS</Title>
+				<Title its:translate="yes">Domain Lookup</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier=":Average DOM Processing Time \(ms\)">
 				<Title its:translate="yes">DOM Processing</Title>
@@ -40,8 +40,11 @@
             <Column content-type="NumericalValue" relative-specifier=":Average Page Render Time \(ms\)">
 				<Title its:translate="yes">Page Render</Title>
 			</Column>
-			<Column content-type="NumericalValue" relative-specifier=":Responses Per Interval">
-				<Title its:translate="yes">Responses</Title>
+			<Column content-type="NumericalValue" relative-specifier=":Page Hits Per Interval">
+				<Title its:translate="yes">Page Hits</Title>
+			</Column>
+            <Column content-type="NumericalValue" relative-specifier=":JavaScript Errors Per Interval">
+				<Title its:translate="yes">JavaScript Errors</Title>
 			</Column>
 		</MetricDataTable>
     </ComponentDefinition>
@@ -61,7 +64,7 @@
 				<Title its:translate="yes">Connection</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier=":Average Domain Lookup Time \(ms\)">
-				<Title its:translate="yes">DNS</Title>
+				<Title its:translate="yes">Domain Lookup</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier=":Average DOM Processing Time \(ms\)">
 				<Title its:translate="yes">DOM Processing</Title>
@@ -69,12 +72,15 @@
             <Column content-type="NumericalValue" relative-specifier=":Average Page Render Time \(ms\)">
 				<Title its:translate="yes">Page Render</Title>
 			</Column>
-			<Column content-type="NumericalValue" relative-specifier=":Responses Per Interval">
-				<Title its:translate="yes">Responses</Title>
+			<Column content-type="NumericalValue" relative-specifier=":Page Hits Per Interval">
+				<Title its:translate="yes">Page Hits</Title>
+			</Column>
+            <Column content-type="NumericalValue" relative-specifier=":JavaScript Errors Per Interval">
+				<Title its:translate="yes">JavaScript Errors</Title>
 			</Column>
 		</MetricDataTable>
     </ComponentDefinition>
-    <ComponentDefinition id="BRTM-browser-table">
+    <ComponentDefinition id="Browser-table">
         <MetricDataTable show-bottom-graph="true">
             <Title>Business Transactions</Title>
             <Column content-type="LastPrefixSegment" relative-width="3" segment-offset="2">
@@ -87,7 +93,7 @@
 				<Title its:translate="yes">Connection</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Domain Lookup Time \(ms\)">
-				<Title its:translate="yes">DNS</Title>
+				<Title its:translate="yes">Domain Lookup</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average DOM Processing Time \(ms\)">
 				<Title its:translate="yes">DOM Processing</Title>
@@ -95,12 +101,15 @@
             <Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Page Render Time \(ms\)">
 				<Title its:translate="yes">Page Render</Title>
 			</Column>
-            <Column content-type="NumericalValue" relative-specifier="(.*)Browser:Responses Per Interval">
-                <Title its:translate="yes">Responses</Title>
+            <Column content-type="NumericalValue" relative-specifier="(.*)Browser:Page Hits Per Interval">
+                <Title its:translate="yes">Page Hits</Title>
             </Column>
+            <Column content-type="NumericalValue" relative-specifier=":JavaScript Errors Per Interval">
+				<Title its:translate="yes">JavaScript Errors</Title>
+			</Column>
         </MetricDataTable>
     </ComponentDefinition>
-    <ComponentDefinition id="BRTM-url-table">
+    <ComponentDefinition id="Browser-url-table">
         <MetricDataTable show-bottom-graph="true">
             <Title>Browser Pages</Title>
             <Column content-type="LastPrefixSegment" relative-width="3" segment-offset="0">
@@ -113,7 +122,7 @@
 				<Title its:translate="yes">Connection</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier=":Average Domain Lookup Time \(ms\)">
-				<Title its:translate="yes">DNS</Title>
+				<Title its:translate="yes">Domain Lookup</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier=":Average DOM Processing Time \(ms\)">
 				<Title its:translate="yes">DOM Processing</Title>
@@ -121,9 +130,12 @@
             <Column content-type="NumericalValue" relative-specifier=":Average Page Render Time \(ms\)">
 				<Title its:translate="yes">Page Render</Title>
 			</Column>
-            <Column content-type="NumericalValue" relative-specifier=":Responses Per Interval">
-                <Title its:translate="yes">Responses</Title>
+            <Column content-type="NumericalValue" relative-specifier=":Page Hits Per Interval">
+                <Title its:translate="yes">Page Hits</Title>
             </Column>
+            <Column content-type="NumericalValue" relative-specifier=":JavaScript Errors Per Interval">
+				<Title its:translate="yes">JavaScript Errors</Title>
+			</Column>
         </MetricDataTable>
     </ComponentDefinition>
     <!-- Component Definitions - End -->
@@ -138,31 +150,31 @@
     <TypeViewer id="bs-url" supported-agents=".*"
         supported-items-specifier="Business Segment\|[^\|]+/[0-9]+" tab-order="1">
         <Title its:translate="yes">Browser</Title>
-        <Component id="BRTM-url-table" specifier-prepend="\|/[^\|]+"/>
+        <Component id="Browser-url-table" specifier-prepend="\|/[^\|]+"/>
     </TypeViewer>
     <TypeViewer id="url-node" supported-agents=".*"
         supported-items-specifier="Business Segment\|[^\|]+/[0-9]+\|[^\|]+" tab-order="1">
         <Title its:translate="yes">Browser</Title>
-        <Component id="BRTM-graph"/>
+        <Component id="Browser-graph"/>
     </TypeViewer>
     <TypeViewer id="bs-node" supported-agents=".*"
         supported-items-specifier="Business Segment\|[^\|]+[^\|/0-9]+" tab-order="1">
         <Title its:translate="yes">Browser</Title>
-        <Component id="BRTM-browser-table" specifier-prepend="\|[^\/][^\|]+via[^\|]+"/>
+        <Component id="Browser-table" specifier-prepend="\|[^\/][^\|]+via[^\|]+"/>
     </TypeViewer>
     <TypeViewer id="bt-node" supported-agents=".*"
         supported-items-specifier="Business Segment\|[^\|]+[^\|/0-9]+\|[^\|]+" tab-order="1">
         <Title its:translate="yes">Browser</Title>
-        <Component id="BRTM-graph" specifier-prepend="\|[^\|]+\|Browser"/>
+        <Component id="Browser-graph" specifier-prepend="\|[^\|]+\|Browser"/>
     </TypeViewer>
     <TypeViewer id="transaction-node" supported-agents=".*"
         supported-items-specifier="Business Segment\|[^\|]+\|[^\|]+\|[^\|]+" tab-order="1">
         <Title its:translate="yes">Browser</Title>
-        <Component id="BRTM-graph" specifier-prepend="\|Browser"/>
+        <Component id="Browser-graph" specifier-prepend="\|Browser"/>
     </TypeViewer>
     <TypeViewer id="browser-node" supported-agents=".*"
         supported-items-specifier="Business Segment\|[^\|]+\|[^\|]+\|[^\|]+\|Browser" tab-order="1">
         <Title its:translate="yes">Browser</Title>
-        <Component id="BRTM-graph"/>
+        <Component id="Browser-graph"/>
     </TypeViewer>
 </TypeViewerSet>
