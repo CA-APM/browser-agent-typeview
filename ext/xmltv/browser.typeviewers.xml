@@ -16,7 +16,24 @@
 			</Panel>
         </Panel>
     </ComponentDefinition>
+    <ComponentDefinition id="ajax-graph">
+        <Panel columns="1" layout="GridLayout" rows="2">
+            <Graph relative-specifier=":Average .*">
+                <Title its:translate="yes">AJAX Timing (ms)</Title>
+            </Graph>
+			<Graph relative-specifier=":Invocation Count Per Interval">
+				<Title its:translate="yes">Invocation Count Per Interval</Title>
+			</Graph>
+        </Panel>
+    </ComponentDefinition>
+    <ComponentDefinition id="spa-graph">
+        <Graph relative-specifier=":Average .*">
+            <Title its:translate="yes">Browser Timing (ms)</Title>
+        </Graph>
+    </ComponentDefinition>
     <ComponentDefinition id="BS-bt">
+        <Panel layout="BorderLayout" contraint="Center">
+            <Title>Business Transactions</Title>
 		<MetricDataTable show-bottom-graph="false">
 			<Title>Business Transactions</Title>
 			<Column content-type="LastPrefixSegment" relative-width="3" segment-offset="3">
@@ -25,20 +42,20 @@
 			<Column content-type="LastPrefixSegment" relative-width="3" segment-offset="2">
 				<Title its:translate="yes">Transaction</Title>
 			</Column>
-			<Column content-type="NumericalValue" relative-specifier=":Average Page Load Time \(ms\)">
-				<Title its:translate="yes">Page Load</Title>
+			<Column content-type="NumericalValue" relative-specifier=":Average Page Load Time \(ms\)" sort="Descending">
+				<Title its:translate="yes">Avg Page Load Time</Title>
 			</Column>
             <Column content-type="NumericalValue" relative-specifier=":Average Connection Establishment Time \(ms\)">
-				<Title its:translate="yes">Connection</Title>
+				<Title its:translate="yes">Avg Connection Time</Title>
 			</Column>
             <Column content-type="NumericalValue" relative-specifier=":Average Domain Lookup Time \(ms\)">
-				<Title its:translate="yes">Domain Lookup</Title>
+				<Title its:translate="yes">Avg Domain Lookup Time</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier=":Average DOM Processing Time \(ms\)">
-				<Title its:translate="yes">DOM Processing</Title>
+				<Title its:translate="yes">Avg DOM Processing Time</Title>
 			</Column>
             <Column content-type="NumericalValue" relative-specifier=":Average Page Render Time \(ms\)">
-				<Title its:translate="yes">Page Render</Title>
+				<Title its:translate="yes">Avg Page Render Time</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier=":Page Hits Per Interval">
 				<Title its:translate="yes">Page Hits</Title>
@@ -47,8 +64,11 @@
 				<Title its:translate="yes">JavaScript Errors</Title>
 			</Column>
 		</MetricDataTable>
+        </Panel>
     </ComponentDefinition>
     <ComponentDefinition id="BS-url">
+        <Panel layout="BorderLayout" contraint="Center">
+            <Title>Browser Pages</Title>
 		<MetricDataTable show-bottom-graph="false">
 			<Title>Browser Pages</Title>
 			<Column content-type="LastPrefixSegment" relative-width="3" segment-offset="1">
@@ -57,20 +77,20 @@
 			<Column content-type="LastPrefixSegment" relative-width="3" segment-offset="0">
 				<Title its:translate="yes">URL</Title>
 			</Column>
-			<Column content-type="NumericalValue" relative-specifier=":Average Page Load Time \(ms\)">
-				<Title its:translate="yes">Page Load</Title>
+			<Column content-type="NumericalValue" relative-specifier=":Average Page Load Time \(ms\)" sort="Descending">
+				<Title its:translate="yes">Avg Page Load Time</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier=":Average Connection Establishment Time \(ms\)">
-				<Title its:translate="yes">Connection</Title>
+				<Title its:translate="yes">Avg Connection Time</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier=":Average Domain Lookup Time \(ms\)">
-				<Title its:translate="yes">Domain Lookup</Title>
+				<Title its:translate="yes">Avg Domain Lookup Time</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier=":Average DOM Processing Time \(ms\)">
-				<Title its:translate="yes">DOM Processing</Title>
+				<Title its:translate="yes">Avg DOM Processing Time</Title>
 			</Column>
             <Column content-type="NumericalValue" relative-specifier=":Average Page Render Time \(ms\)">
-				<Title its:translate="yes">Page Render</Title>
+				<Title its:translate="yes">Avg Page Render Time</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier=":Page Hits Per Interval">
 				<Title its:translate="yes">Page Hits</Title>
@@ -79,27 +99,30 @@
 				<Title its:translate="yes">JavaScript Errors</Title>
 			</Column>
 		</MetricDataTable>
+        </Panel>
     </ComponentDefinition>
     <ComponentDefinition id="Browser-table">
-        <MetricDataTable show-bottom-graph="true">
+        <Panel layout="BorderLayout" contraint="Center">
+            <Title>Business Transactions</Title>
+        <MetricDataTable show-bottom-graph="false">
             <Title>Business Transactions</Title>
             <Column content-type="LastPrefixSegment" relative-width="3" segment-offset="2">
                 <Title its:translate="yes">Transaction</Title>
             </Column>
-            <Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Page Load Time \(ms\)">
-				<Title its:translate="yes">Page Load</Title>
+            <Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Page Load Time \(ms\)" sort="Descending">
+				<Title its:translate="yes">Avg Page Load Time</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Connection Establishment Time \(ms\)">
-				<Title its:translate="yes">Connection</Title>
+				<Title its:translate="yes">Avg Connection Time</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Domain Lookup Time \(ms\)">
-				<Title its:translate="yes">Domain Lookup</Title>
+				<Title its:translate="yes">Avg Domain Lookup Time</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average DOM Processing Time \(ms\)">
-				<Title its:translate="yes">DOM Processing</Title>
+				<Title its:translate="yes">Avg DOM Processing Time</Title>
 			</Column>
             <Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Page Render Time \(ms\)">
-				<Title its:translate="yes">Page Render</Title>
+				<Title its:translate="yes">Avg Page Render Time</Title>
 			</Column>
             <Column content-type="NumericalValue" relative-specifier="(.*)Browser:Page Hits Per Interval">
                 <Title its:translate="yes">Page Hits</Title>
@@ -108,27 +131,62 @@
 				<Title its:translate="yes">JavaScript Errors</Title>
 			</Column>
         </MetricDataTable>
+        </Panel>
+    </ComponentDefinition>
+    <ComponentDefinition id="Browser-table-show">
+        <Panel layout="BorderLayout" contraint="Center">
+            <Title>Business Transactions</Title>
+        <MetricDataTable show-bottom-graph="true">
+            <Title>Business Transactions</Title>
+            <Column content-type="LastPrefixSegment" relative-width="3" segment-offset="2">
+                <Title its:translate="yes">Transaction</Title>
+            </Column>
+            <Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Page Load Time \(ms\)" sort="Descending">
+				<Title its:translate="yes">Avg Page Load Time</Title>
+			</Column>
+			<Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Connection Establishment Time \(ms\)">
+				<Title its:translate="yes">Avg Connection Time</Title>
+			</Column>
+			<Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Domain Lookup Time \(ms\)">
+				<Title its:translate="yes">Avg Domain Lookup Time</Title>
+			</Column>
+			<Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average DOM Processing Time \(ms\)">
+				<Title its:translate="yes">Avg DOM Processing Time</Title>
+			</Column>
+            <Column content-type="NumericalValue" relative-specifier="(.*)Browser:Average Page Render Time \(ms\)">
+				<Title its:translate="yes">Avg Page Render Time</Title>
+			</Column>
+            <Column content-type="NumericalValue" relative-specifier="(.*)Browser:Page Hits Per Interval">
+                <Title its:translate="yes">Page Hits</Title>
+            </Column>
+            <Column content-type="NumericalValue" relative-specifier=":JavaScript Errors Per Interval">
+				<Title its:translate="yes">JavaScript Errors</Title>
+			</Column>
+        </MetricDataTable>
+        </Panel>
     </ComponentDefinition>
     <ComponentDefinition id="Browser-url-table">
-        <MetricDataTable show-bottom-graph="true">
+        <Panel layout="BorderLayout" contraint="Center">
+            <Title>Browser Pages</Title>
+        <MetricDataTable show-bottom-graph="false">
             <Title>Browser Pages</Title>
             <Column content-type="LastPrefixSegment" relative-width="3" segment-offset="0">
                 <Title its:translate="yes">Page</Title>
             </Column>
-            <Column content-type="NumericalValue" relative-specifier=":Average Page Load Time \(ms\)">
-				<Title its:translate="yes">Page Load</Title>
+            <Column content-type="NumericalValue" relative-specifier=":Average Page Load Time \(ms\)" sort="Descending">
+				<Title its:translate="yes">Avg Page Load Time</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier=":Average Connection Establishment Time \(ms\)">
-				<Title its:translate="yes">Connection</Title>
+				<Title its:translate="yes">Avg Connection Time</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier=":Average Domain Lookup Time \(ms\)">
-				<Title its:translate="yes">Domain Lookup</Title>
+				<Title its:translate="yes">Avg Domain Lookup Time</Title>
 			</Column>
 			<Column content-type="NumericalValue" relative-specifier=":Average DOM Processing Time \(ms\)">
-				<Title its:translate="yes">DOM Processing</Title>
+				<Title its:translate="yes">Avg DOM Processing Time</Title>
 			</Column>
             <Column content-type="NumericalValue" relative-specifier=":Average Page Render Time \(ms\)">
-				<Title its:translate="yes">Page Render</Title>
+				<Title its:translate="yes">Avg Page Render Time</Title>
 			</Column>
             <Column content-type="NumericalValue" relative-specifier=":Page Hits Per Interval">
                 <Title its:translate="yes">Page Hits</Title>
@@ -137,6 +195,171 @@
 				<Title its:translate="yes">JavaScript Errors</Title>
 			</Column>
         </MetricDataTable>
+        </Panel>
+    </ComponentDefinition>
+    <ComponentDefinition id="Browser-url-table-show">
+        <Panel layout="BorderLayout" contraint="Center">
+            <Title>Browser Pages</Title>
+        <MetricDataTable show-bottom-graph="true">
+            <Title>Browser Pages</Title>
+            <Column content-type="LastPrefixSegment" relative-width="3" segment-offset="0">
+                <Title its:translate="yes">Page</Title>
+            </Column>
+            <Column content-type="NumericalValue" relative-specifier=":Average Page Load Time \(ms\)" sort="Descending">
+				<Title its:translate="yes">Avg Page Load Time</Title>
+			</Column>
+			<Column content-type="NumericalValue" relative-specifier=":Average Connection Establishment Time \(ms\)">
+				<Title its:translate="yes">Avg Connection Time</Title>
+			</Column>
+			<Column content-type="NumericalValue" relative-specifier=":Average Domain Lookup Time \(ms\)">
+				<Title its:translate="yes">Avg Domain Lookup Time</Title>
+			</Column>
+			<Column content-type="NumericalValue" relative-specifier=":Average DOM Processing Time \(ms\)">
+				<Title its:translate="yes">Avg DOM Processing Time</Title>
+			</Column>
+            <Column content-type="NumericalValue" relative-specifier=":Average Page Render Time \(ms\)">
+				<Title its:translate="yes">Avg Page Render Time</Title>
+			</Column>
+            <Column content-type="NumericalValue" relative-specifier=":Page Hits Per Interval">
+                <Title its:translate="yes">Page Hits</Title>
+            </Column>
+            <Column content-type="NumericalValue" relative-specifier=":JavaScript Errors Per Interval">
+				<Title its:translate="yes">JavaScript Errors</Title>
+			</Column>
+        </MetricDataTable>
+        </Panel>
+    </ComponentDefinition>
+    <ComponentDefinition id="ajax-host-url-table">
+        <Panel layout="BorderLayout" contraint="Center">
+            <Title>AJAX Calls</Title>
+            <MetricDataTable show-bottom-graph="false">
+                <Title>AJAX Calls</Title>
+			    <Column content-type="LastPrefixSegment" relative-width="3" segment-offset="1">
+				    <Title its:translate="yes">Host</Title>
+				</Column>
+				<Column content-type="LastPrefixSegment" relative-width="3" segment-offset="0">
+					<Title its:translate="yes">URL</Title>
+				</Column>
+                <Column content-type="NumericalValue" relative-specifier=":Average Resource Load Time \(ms\)" sort="Descending">
+					<Title its:translate="yes">Avg Resource Load Time</Title>
+				</Column>
+				<Column content-type="NumericalValue" relative-specifier=":Average Callback Execution Time \(ms\)">
+					<Title its:translate="yes">Avg Callback Execution Time</Title>
+				</Column>
+				<Column content-type="NumericalValue" relative-specifier=":Average Response Download Time \(ms\)">
+					<Title its:translate="yes">Avg Response Download Time</Title>
+				</Column>
+				<Column content-type="NumericalValue" relative-specifier=":Average Time To First Byte \(ms\)">
+					<Title its:translate="yes">Avg Time to First Byte</Title>
+				</Column>
+    	        <Column content-type="NumericalValue" relative-specifier=":Invocation Count Per Interval">
+					<Title its:translate="yes">Invocation Count</Title>
+				</Column>
+	       </MetricDataTable>
+        </Panel>
+    </ComponentDefinition>
+    <ComponentDefinition id="ajax-host-url-table-show">
+        <Panel layout="BorderLayout" contraint="Center">
+            <Title>AJAX Calls</Title>
+            <MetricDataTable show-bottom-graph="true">
+                <Title>AJAX Calls</Title>
+			    <Column content-type="LastPrefixSegment" relative-width="3" segment-offset="1">
+				    <Title its:translate="yes">Host</Title>
+				</Column>
+				<Column content-type="LastPrefixSegment" relative-width="3" segment-offset="0">
+					<Title its:translate="yes">URL</Title>
+				</Column>
+                <Column content-type="NumericalValue" relative-specifier=":Average Resource Load Time \(ms\)" sort="Descending">
+					<Title its:translate="yes">Avg Resource Load Time</Title>
+				</Column>
+				<Column content-type="NumericalValue" relative-specifier=":Average Callback Execution Time \(ms\)">
+					<Title its:translate="yes">Avg Callback Execution Time</Title>
+				</Column>
+				<Column content-type="NumericalValue" relative-specifier=":Average Response Download Time \(ms\)">
+					<Title its:translate="yes">Avg Response Download Time</Title>
+				</Column>
+				<Column content-type="NumericalValue" relative-specifier=":Average Time To First Byte \(ms\)">
+					<Title its:translate="yes">Avg Time to First Byte</Title>
+				</Column>
+    	        <Column content-type="NumericalValue" relative-specifier=":Invocation Count Per Interval">
+					<Title its:translate="yes">Invocation Count</Title>
+				</Column>
+	       </MetricDataTable>
+        </Panel>
+    </ComponentDefinition>
+    <ComponentDefinition id="ajax-url-table-show">
+        <Panel layout="BorderLayout" contraint="Center">
+            <Title>AJAX Calls</Title>
+		<MetricDataTable show-bottom-graph="true">
+			<Title>AJAX Calls</Title>
+			<Column content-type="LastPrefixSegment" relative-width="3" segment-offset="0">
+    			<Title its:translate="yes">URL</Title>
+    		</Column>
+            <Column content-type="NumericalValue" relative-specifier=":Average Resource Load Time \(ms\)" sort="Descending">
+                <Title its:translate="yes">Avg Resource Load Time</Title>
+            </Column>
+            <Column content-type="NumericalValue" relative-specifier=":Average Callback Execution Time \(ms\)">
+                <Title its:translate="yes">Avg Callback Execution Time</Title>
+            </Column>
+    		<Column content-type="NumericalValue" relative-specifier=":Average Response Download Time \(ms\)">
+    			<Title its:translate="yes">Avg Response Download Time</Title>
+			</Column>
+            <Column content-type="NumericalValue" relative-specifier=":Average Time To First Byte \(ms\)">
+    		    <Title its:translate="yes">Avg Time to First Byte</Title>
+    		</Column>
+            <Column content-type="NumericalValue" relative-specifier=":Invocation Count Per Interval">
+    			<Title its:translate="yes">Invocation Count</Title>
+    		</Column>
+    	   </MetricDataTable>
+        </Panel>
+    </ComponentDefinition>
+    <ComponentDefinition id="spa-host-url-table">
+        <Panel layout="BorderLayout" contraint="Center">
+            <Title>Soft Page Calls</Title>
+		<MetricDataTable show-bottom-graph="false">
+			<Title>Soft Page Calls</Title>
+			<Column content-type="LastPrefixSegment" relative-width="3" segment-offset="1">
+				<Title its:translate="yes">Host</Title>
+			</Column>
+			<Column content-type="LastPrefixSegment" relative-width="3" segment-offset="0">
+				<Title its:translate="yes">URL</Title>
+			</Column>
+			<Column content-type="NumericalValue" relative-specifier=":Average Page Load Time \(ms\)" sort="Descending">
+				<Title its:translate="yes">Average Page Load Time (ms)</Title>
+			</Column>
+		</MetricDataTable>
+        </Panel>
+    </ComponentDefinition>
+    <ComponentDefinition id="spa-host-url-table-show">
+        <Panel layout="BorderLayout" contraint="Center">
+            <Title>Soft Page Calls</Title>
+		<MetricDataTable show-bottom-graph="true">
+			<Title>Soft Page Calls</Title>
+			<Column content-type="LastPrefixSegment" relative-width="3" segment-offset="1">
+				<Title its:translate="yes">Host</Title>
+			</Column>
+			<Column content-type="LastPrefixSegment" relative-width="3" segment-offset="0">
+				<Title its:translate="yes">URL</Title>
+			</Column>
+			<Column content-type="NumericalValue" relative-specifier=":Average Page Load Time \(ms\)" sort="Descending">
+				<Title its:translate="yes">Average Page Load Time (ms)</Title>
+			</Column>
+		</MetricDataTable>
+        </Panel>
+    </ComponentDefinition>
+    <ComponentDefinition id="spa-url-table-show">
+        <Panel layout="BorderLayout" contraint="Center">
+            <Title>Soft Page Calls</Title>
+		<MetricDataTable show-bottom-graph="true">
+            <Title>Soft Page Calls</Title>
+            <Column content-type="LastPrefixSegment" relative-width="3" segment-offset="0">
+				<Title its:translate="yes">URL</Title>
+			</Column>
+			<Column content-type="NumericalValue" relative-specifier=":Average Page Load Time \(ms\)" sort="Descending">
+				<Title its:translate="yes">Average Page Load Time (ms)</Title>
+			</Column>
+		</MetricDataTable>
+        </Panel>
     </ComponentDefinition>
     <!-- Component Definitions - End -->
     <TypeViewer id="bs" supported-agents=".*"
@@ -150,31 +373,115 @@
     <TypeViewer id="bs-url" supported-agents=".*"
         supported-items-specifier="Business Segment\|[^\|]+/[0-9]+" tab-order="1">
         <Title its:translate="yes">Browser</Title>
-        <Component id="Browser-url-table" specifier-prepend="\|/[^\|]+"/>
+        <Component id="Browser-url-table-show" specifier-prepend="\|/[^\|]+"/>
     </TypeViewer>
     <TypeViewer id="url-node" supported-agents=".*"
         supported-items-specifier="Business Segment\|[^\|]+/[0-9]+\|[^\|]+" tab-order="1">
         <Title its:translate="yes">Browser</Title>
-        <Component id="Browser-graph"/>
+        <SplitPane orientation="Vertical" split-ratio="0.6">
+            <Component id="Browser-graph"/>
+                <Panel columns="2" layout="GridLayout" rows="1">
+                    <Component id="ajax-host-url-table" specifier-prepend="\|AJAX Call\|[^\|]+\|[^\|]+"/>
+                    <Component id="spa-host-url-table"  specifier-prepend="\|Soft Page\|[^\|]+\|[^\|]+"/>
+                </Panel>
+        </SplitPane>
+    </TypeViewer>
+    <TypeViewer id="url-ajax-node" supported-agents=".*"
+        supported-items-specifier="Business Segment\|[^\|]+/[0-9]+\|[^\|]+\|AJAX Call" tab-order="1">
+        <Title its:translate="yes">Browser</Title>
+        <Component id="ajax-host-url-table-show" specifier-prepend="\|[^\|]+\|[^\|]+"/>
+    </TypeViewer>
+    <TypeViewer id="url-ajax-host" supported-agents=".*"
+        supported-items-specifier="Business Segment\|[^\|]+/[0-9]+\|[^\|]+\|AJAX Call\|[^\|]+" tab-order="1">
+        <Title its:translate="yes">Browser</Title>
+        <Component id="ajax-url-table-show" specifier-prepend="\|[^\|]+"/>
+    </TypeViewer>
+    <TypeViewer id="url-ajax-url" supported-agents=".*"
+        supported-items-specifier="Business Segment\|[^\|]+/[0-9]+\|[^\|]+\|AJAX Call\|[^\|]+\|[^\|]+" tab-order="1">
+        <Title its:translate="yes">Browser</Title>
+        <Component id="ajax-graph"/>
+    </TypeViewer>
+    <TypeViewer id="url-spa-node" supported-agents=".*"
+        supported-items-specifier="Business Segment\|[^\|]+/[0-9]+\|[^\|]+\|Soft Page" tab-order="1">
+        <Title its:translate="yes">Browser</Title>
+        <Component id="spa-host-url-table-show" specifier-prepend="\|[^\|]+\|[^\|]+"/>
+    </TypeViewer>
+    <TypeViewer id="url-spa-host" supported-agents=".*"
+        supported-items-specifier="Business Segment\|[^\|]+/[0-9]+\|[^\|]+\|Soft Page\|[^\|]+" tab-order="1">
+        <Title its:translate="yes">Browser</Title>
+        <Component id="spa-url-table-show" specifier-prepend="\|[^\|]+"/>
+    </TypeViewer>
+    <TypeViewer id="url-spa-url" supported-agents=".*"
+        supported-items-specifier="Business Segment\|[^\|]+/[0-9]+\|[^\|]+\|Soft Page\|[^\|]+\|[^\|]+" tab-order="1">
+        <Title its:translate="yes">Browser</Title>
+        <Component id="spa-graph"/>
     </TypeViewer>
     <TypeViewer id="bs-node" supported-agents=".*"
         supported-items-specifier="Business Segment\|[^\|]+[^\|/0-9]+" tab-order="1">
         <Title its:translate="yes">Browser</Title>
-        <Component id="Browser-table" specifier-prepend="\|[^\/][^\|]+via[^\|]+"/>
+        <Component id="Browser-table-show" specifier-prepend="\|[^\|]+"/>
     </TypeViewer>
     <TypeViewer id="bt-node" supported-agents=".*"
         supported-items-specifier="Business Segment\|[^\|]+[^\|/0-9]+\|[^\|]+" tab-order="1">
         <Title its:translate="yes">Browser</Title>
-        <Component id="Browser-graph" specifier-prepend="\|[^\|]+\|Browser"/>
+        <SplitPane orientation="Vertical" split-ratio="0.6">
+            <Component id="Browser-graph" specifier-prepend="\|[^\|]+\|Browser"/>
+                <Panel columns="2" layout="GridLayout" rows="1">
+                    <Component id="ajax-host-url-table" specifier-prepend="\|[^\|]+\|Browser\|AJAX Call\|[^\|]+\|[^\|]+"/>
+                    <Component id="spa-host-url-table"  specifier-prepend="\|[^\|]+\|Browser\|Soft Page\|[^\|]+\|[^\|]+"/>
+                </Panel>
+        </SplitPane>
     </TypeViewer>
     <TypeViewer id="transaction-node" supported-agents=".*"
-        supported-items-specifier="Business Segment\|[^\|]+\|[^\|]+\|[^\|]+" tab-order="1">
+        supported-items-specifier="Business Segment\|[^\|]+[^\|/0-9]+\|[^\|]+\|[^\|]+" tab-order="1">
         <Title its:translate="yes">Browser</Title>
-        <Component id="Browser-graph" specifier-prepend="\|Browser"/>
+        <SplitPane orientation="Vertical" split-ratio="0.6">
+            <Component id="Browser-graph" specifier-prepend="\|Browser"/>
+                <Panel columns="2" layout="GridLayout" rows="1">
+                    <Component id="ajax-host-url-table" specifier-prepend="\|Browser\|AJAX Call\|[^\|]+\|[^\|]+"/>
+                    <Component id="spa-host-url-table"  specifier-prepend="\|Browser\|Soft Page\|[^\|]+\|[^\|]+"/>
+            </Panel>
+        </SplitPane>
     </TypeViewer>
     <TypeViewer id="browser-node" supported-agents=".*"
-        supported-items-specifier="Business Segment\|[^\|]+\|[^\|]+\|[^\|]+\|Browser" tab-order="1">
+        supported-items-specifier="Business Segment\|[^\|]+[^\|/0-9]+\|[^\|]+\|[^\|]+\|Browser" tab-order="1">
         <Title its:translate="yes">Browser</Title>
-        <Component id="Browser-graph"/>
+        <SplitPane orientation="Vertical" split-ratio="0.6">
+            <Component id="Browser-graph"/>
+                <Panel columns="2" layout="GridLayout" rows="1">
+                    <Component id="ajax-host-url-table" specifier-prepend="\|AJAX Call\|[^\|]+\|[^\|]+"/>
+                    <Component id="spa-host-url-table"  specifier-prepend="\|Soft Page\|[^\|]+\|[^\|]+"/>
+                </Panel>
+        </SplitPane>
+    </TypeViewer>
+    <TypeViewer id="bt-ajax-node" supported-agents=".*"
+        supported-items-specifier="Business Segment\|[^\|]+[^\|/0-9]+\|[^\|]+\|[^\|]+\|Browser\|AJAX Call" tab-order="1">
+        <Title its:translate="yes">Browser</Title>
+        <Component id="ajax-host-url-table-show" specifier-prepend="\|[^\|]+\|[^\|]+"/>
+    </TypeViewer>
+    <TypeViewer id="bt-ajax-host" supported-agents=".*"
+        supported-items-specifier="Business Segment\|[^\|]+[^\|/0-9]+\|[^\|]+\|[^\|]+\|Browser\|AJAX Call\|[^\|]+" tab-order="1">
+        <Title its:translate="yes">Browser</Title>
+        <Component id="ajax-url-table-show" specifier-prepend="\|[^\|]+"/>
+    </TypeViewer>
+    <TypeViewer id="bt-ajax-url" supported-agents=".*"
+        supported-items-specifier="Business Segment\|[^\|]+[^\|/0-9]+\|[^\|]+\|[^\|]+\|Browser\|AJAX Call\|[^\|]+\|[^\|]+" tab-order="1">
+        <Title its:translate="yes">Browser</Title>
+        <Component id="ajax-graph"/>
+    </TypeViewer>
+    <TypeViewer id="bt-spa-node" supported-agents=".*"
+        supported-items-specifier="Business Segment\|[^\|]+[^\|/0-9]+\|[^\|]+\|[^\|]+\|Browser\|Soft Page" tab-order="1">
+        <Title its:translate="yes">Browser</Title>
+        <Component id="spa-host-url-table-show" specifier-prepend="\|[^\|]+\|[^\|]+"/>
+    </TypeViewer>
+    <TypeViewer id="bt-spa-host" supported-agents=".*"
+        supported-items-specifier="Business Segment\|[^\|]+[^\|/0-9]+\|[^\|]+\|[^\|]+\|Browser\|Soft Page\|[^\|]+" tab-order="1">
+        <Title its:translate="yes">Browser</Title>
+        <Component id="spa-url-table-show" specifier-prepend="\|[^\|]+"/>
+    </TypeViewer>
+    <TypeViewer id="bt-spa-url" supported-agents=".*"
+        supported-items-specifier="Business Segment\|[^\|]+[^\|/0-9]+\|[^\|]+\|[^\|]+\|Browser\|Soft Page\|[^\|]+\|[^\|]+" tab-order="1">
+        <Title its:translate="yes">Browser</Title>
+        <Component id="spa-graph"/>
     </TypeViewer>
 </TypeViewerSet>
