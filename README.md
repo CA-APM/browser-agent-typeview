@@ -6,7 +6,7 @@ This extension provides a CA APM Browser Agent tab that displays Navigation Timi
 # Description
 This extension provides a CA APM Browser Agent tab that displays the Browser Metric Overview and Browser Timings Navigation Timing API metrics.
 
-For installation instructons, see the ReadMe.MD file.
+For installation instructons, see the README.MD file.
 
 # APM version
 CA APM 10.1 and later
@@ -17,45 +17,12 @@ Tested with CA APM 10.1. CA APM 10.1 and later.
 # Limitations
 Only works for Page Load metrics, not AJAX or Javascript metrics.
 
-# License - GUENTER POINT TO EULA HERE?
-[Apache License 2.0](LICENSE).
+# License
+Apache License 2.0
 
-# Installation
+# Install the Browser Agent Tab for Navigation Timing API Metrics
 
-## Install Using CA APM Control Center
-
-### 10.5 
-
-1. Download the bundle (extension) from the CA APM Marketplace.
-   http://marketplace.ca.com/shop/ca/?cat=29
-2. Go to the Bundles page and click the **Import** button.
-2. Navigate to the downloaded bundle and click **Open**.
-3. On the Packages page, add the bundle to the desired package.
-
-### 10.2 and 10.3
-
-1. Download the extension (bundle) from the CA APM Marketplace.
-   http://marketplace.ca.com/shop/ca/?cat=29
-2. Navigate to the downloaded bundle.
-3. Copy the bundle to the <APMCommandCenterServer>/import directory. 
-   The bundle is automatically imported into the APM Command Center database and moved to the bundles directory.
-4. Copy the ext/xmltv/browser.typeviewers.xml file from the downloaded extension into the MOM <*EM_HOME*>ext/xmltv directory.
-
-## Install Manually
-
-### 10.5 and later
-
-1. Download the extension from the CA APM Marketplace.
-   http://marketplace.ca.com/shop/ca/?cat=29
-2. Navigate to the downloaded extension and untar the file.
-3. Copy the .tar file to the <*Agent_Home*>/extensions/deploy directory.
-   The agent automatically automatically installs and deploys the extension, which starts monitoring the managed application.
-4. Copy the ext/xmltv/browser.typeviewers.xml file from the downloaded extension into the MOM <*EM_HOME*>ext/xmltv directory.
-
-### 10.3 and earlier
-
-1. Download the extension from the CA APM Marketplace.
-   http://marketplace.ca.com/shop/ca/?cat=29
+1. Download the Browser Agent Tab for Navigation Timing API extension from the [CA APM Marketplace.] (http://marketplace.ca.com/shop/ca/?cat=29)
 2. Navigate to the downloaded extension and unzip or untar as appropriate into the <*Agent_Home*> directory.
 3. Add the extension jar file to the <*Agent_Home*>/core/ext directory.
 4. Add the .pbd or pbl files to the <*Agent_Home*>/core/config directory.
